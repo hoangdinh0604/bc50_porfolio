@@ -1,0 +1,167 @@
+*{
+    font-size: 16px;
+}
+header{
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header .logo i{
+    color: green;
+    font-size: 3rem;
+}
+header .logo span{
+    font-size: 2rem;
+}
+header .menu li{
+    margin:0 0.8rem;
+}
+header .menu li a{
+    color: white !important;
+}
+header .menu li.active a{
+    color: green !important;
+}
+header .menu li a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: green;
+    display: block;
+    transition:0.5s;
+}
+header .menu li.active a::after{
+    width: 100%;
+}
+header .menu li:hover a::after{
+    width: 100%;
+}
+header .menu li:hover a{
+    color: green !important;
+}
+/* carousel */
+.carousel-item:nth-child(1){
+    background-image: url(../images/image/finland.jpg);
+}
+.carousel-item:nth-child(2){
+    background-image: url(../images/image/mountains.jpg);
+}
+.carousel-item:nth-child(3){
+    background-image: url(../images/image/mountains-1.jpg);
+}
+.carousel-item{
+height: 100vh;
+background-size: cover;
+background-position: center;
+}
+.carousel-caption-thumb img{
+    border-radius: 50%;
+    width: 150px;
+}
+.carousel-caption h3{
+    font-size: 3.5rem;
+}
+.carousel-caption p{
+    font-size: 1.5rem;
+}
+
+.carousel-caption{
+    top:50%;
+    transform: translateY(-50%);
+}
+.carousel-indicators li{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.project_title h1{
+   font-weight: bolder;
+}
+#project .card{
+    border-radius: 20px;
+    overflow: hidden ;
+    box-shadow: 0 0 3px rgba(128, 128, 128, 0.459);
+    cursor: pointer;
+}
+#project .card-title{
+    font-size: 1rem;
+}
+#project .card-body{
+border: 1px solid rgba(128, 128, 128, 0.459);
+transition: all 0.1s;
+}
+#project .card:hover .card-body{
+    border-color: green;
+    border-radius: 0 0 20px 20px;
+    border-top: transparent;
+    color: green;
+}
+/* .nav-pills{
+    justify-content:center ;
+}*/
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: green;
+}
+.nav-pills .nav-item .nav-link:not(.active) {
+    border: 1px solid black;
+    border-radius: .25rem;
+    margin: 0 5px;
+} 
+#service{
+    background-image: url(../images/image/3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.card-body i{
+    color: green;
+    font-size: 3rem;
+}
+#service .card{
+    background-color: #ffffff3b;
+    backdrop-filter: blur(3px);
+    transition: 0.5s;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+}
+.card-body{
+    color: white;
+}
+#service .card:hover{
+    background-color: black;
+    border: 1px solid white;
+
+}
+.card-body h4{
+    margin: 1rem;
+}
+.service_overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0000009f;
+}
+#service .service_tilte{
+    position: relative;
+}
+@media only screen and (max-width: 576px){
+    #service .card{
+        margin: 1rem;
+    }
+}
+@media only screen and (max-width: 900px){
+    #service .card{
+        margin: 0.5rem;
+    }
+}
+@media only screen and (max-width: 1200px){
+    #service .card{
+        margin: 1rem;
+    }
+}
